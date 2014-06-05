@@ -11,7 +11,6 @@ if has('vim_starting')
   call neobundle#rc(expand('~/.vim/bundle/'))
 endif
 " originalrepos on github
-NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
   \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -29,20 +28,33 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tomasr/molokai'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'scrooloose/nerdtree'
 ""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on
 filetype indent on
 syntax on
 
+" vimshell
+let g:vimshell_prompt=$USER."% "
+
 " neocomplcache
-let g:neocomplcache_enable_at_startup = 1
-let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_camel_case_completion=1
 
 " color scheme
 autocmd colorscheme * highlight Visual ctermbg=8
 colorscheme molokai
 let g:molokai_original=1
+
+" tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" nerdtree
+nmap <F9> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+let g:NERDTreeShowHidden=1
 
 " display
 set showmatch
