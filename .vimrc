@@ -62,6 +62,7 @@ endif
 
 " color scheme
 autocmd colorscheme * highlight Visual ctermbg=8
+autocmd ColorScheme * highlight Comment ctermfg=57
 colorscheme molokai
 let g:molokai_original=1
 
