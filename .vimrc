@@ -43,6 +43,23 @@ let g:vimshell_prompt=$USER."% "
 let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_enable_camel_case_completion=1
 
+" snippet
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
 " color scheme
 autocmd colorscheme * highlight Visual ctermbg=8
 colorscheme molokai
@@ -59,7 +76,7 @@ let g:NERDTreeShowHidden=1
 " display
 set showmatch
 set cursorline
-set nowrap
+set wrap
 set number
 set showmode
 set showcmd
@@ -92,6 +109,9 @@ set matchtime=3
 set report=0
 set smartcase
 set wrapscan
+
+" insert
+set backspace=start,eol,indent
 
 " map
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
