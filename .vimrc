@@ -84,6 +84,8 @@ set showcmd
 set ruler
 
 " status line
+set laststatus=2
+highlight StatusLineNC ctermfg=black ctermbg=black
 set statusline=%n:%<\ %f%a\ %m%r%h%w%y[%{&fenc!=''?&fenc:&enc}][%{&ff}]%=pos:%l,%c%V\ %obytes\ 0x%06.6B\ %03.3p%%
 
 " tab line
