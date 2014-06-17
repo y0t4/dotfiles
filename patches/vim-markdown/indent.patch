@@ -1,0 +1,15 @@
+29c29,36
+<     let list_ind = 4
+---
+>     if !exists("g:vim_markdown_auto_increase_indent_disabled")
+>         let g:vim_markdown_auto_increase_indent_disabled = 0
+>     endif
+>     if exists("g:vim_markdown_indent_width")
+>         let list_ind = g:vim_markdown_indent_width
+>     else
+>         let list_ind = 4
+>     endif
+40c47
+<     elseif s:is_li_start(line)
+---
+>     elseif s:is_li_start(line) && !g:vim_markdown_auto_increase_indent_disabled
