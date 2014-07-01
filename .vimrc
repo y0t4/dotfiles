@@ -144,6 +144,8 @@ set matchtime=3
 set report=0
 set smartcase
 set wrapscan
+cnoremap <expr> /
+      \ getcmdtype() == '/' ? '\/' : '/'
 
 " insert
 set backspace=start,eol,indent
