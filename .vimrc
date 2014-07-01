@@ -62,8 +62,11 @@ if has('conceal')
 endif
 
 " color scheme
-autocmd colorscheme * highlight Visual ctermbg=8
-autocmd ColorScheme * highlight Comment ctermfg=57
+augroup MyColorScheme
+  autocmd!
+  autocmd ColorScheme * highlight Visual ctermbg=8
+  autocmd ColorScheme * highlight Comment ctermfg=57
+augroup END
 colorscheme molokai
 let g:molokai_original=1
 
@@ -72,7 +75,10 @@ nmap <F8> :TagbarToggle<CR>
 
 " nerdtree
 nmap <F9> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+augroup MyNerdTree
+  autocmd!
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+augroup END
 let g:NERDTreeShowHidden=1
 
 " for markdown
@@ -140,7 +146,10 @@ nmap <ESC><ESC> :nohlsearch<CR><ESC>
 set list
 set listchars=tab:»\ ,trail:_,precedes:«,extends:»
 highlight ZenkakuSpace cterm=underline ctermbg=white ctermfg=blue
-autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+augroup MyZenkakuSpace
+  autocmd!
+  autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+augroup END
 
 " ctags
 set tags=tags
