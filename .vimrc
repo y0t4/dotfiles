@@ -31,6 +31,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'thinca/vim-quickrun'
 
 filetype plugin indent on
 filetype indent on
@@ -80,6 +81,15 @@ let g:vim_markdown_folding_disabled=1
 " NOTE: 以下の設定を行う場合pluginのソースを若干いじる必要があります。
 let g:vim_markdown_auto_increase_indent_disabled=1
 let g:vim_markdown_indent_width=2
+
+" for quickrun
+let g:quickrun_config = {
+  \   "_" : {
+  \       "runner" : "vimproc",
+  \       "outputter/buffer/split" : ":botright 8sp",
+  \       "outputter/buffer/close_on_empty" : 1
+  \   },
+  \}
 
 " display
 set showmatch
