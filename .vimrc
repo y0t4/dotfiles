@@ -31,7 +31,6 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
-""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
 filetype plugin indent on
 filetype indent on
