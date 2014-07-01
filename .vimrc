@@ -29,8 +29,8 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'kannokanno/previm'
+NeoBundleLazy 'plasticboy/vim-markdown', {'autoload' : {'filetypes' : ['markdown'] }}
+NeoBundleLazy 'kannokanno/previm',       {'autoload' : {'filetypes' : ['markdown'] }}
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
 
@@ -87,7 +87,10 @@ augroup END
 let g:NERDTreeShowHidden=1
 
 " for markdown
-au BufRead,BufNewFile *.md set filetype=markdown
+augroup MyMarkdown
+  autocmd!
+  autocmd BufRead,BufNewFile *.{md,mkd} set filetype=markdown
+augroup END
 let g:vim_markdown_folding_disabled=1
 " NOTE: 以下の設定を行う場合pluginのソースを若干いじる必要があります。
 let g:vim_markdown_auto_increase_indent_disabled=1
