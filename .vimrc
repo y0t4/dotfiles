@@ -33,6 +33,7 @@ NeoBundleLazy 'plasticboy/vim-markdown', {'autoload' : {'filetypes' : ['markdown
 NeoBundleLazy 'kannokanno/previm',       {'autoload' : {'filetypes' : ['markdown'] }}
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'tpope/vim-fugitive'
 
 call neobundle#end()
 
@@ -117,7 +118,7 @@ set ruler
 " status line
 set laststatus=2
 highlight StatusLineNC ctermfg=black ctermbg=black
-set statusline=%n:%<\ %f%a\ %m%r%h%w%y[%{&fenc!=''?&fenc:&enc}][%{&ff}]%=pos:%l,%c%V\ %obytes\ 0x%06.6B\ %03.3p%%
+set statusline=%n:%<\ %f%a\ %m%r%h%w%y[%{&fenc!=''?&fenc:&enc}][%{&ff}]%{fugitive#statusline()}%=pos:%l,%c%V\ %obytes\ 0x%06.6B\ %03.3p%%
 
 " tab line
 set showtabline=2
