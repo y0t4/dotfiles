@@ -25,7 +25,7 @@ echo -e "     or \033[33m$ port install ctags\033[0m"
 echo -e "RedHat: \033[33m$ yum install ctags\033[0m"
 echo -e "Debian: \033[33m$ apt-get install ctags\033[0m"
 
-curl -o ~/.vimrc https://raw.githubusercontent.com/yosukeota/dotfiles/master/.vimrc >/dev/null 2>&1 || ( echo -e "\033[31mCould not download .vimrc\033[0m" && exit 1 ) || exit 1
+curl -o ~/.vimrc https://raw.githubusercontent.com/y0t4/dotfiles/master/.vimrc >/dev/null 2>&1 || ( echo -e "\033[31mCould not download .vimrc\033[0m" && exit 1 ) || exit 1
 
 [ ! -d ~/.vim/bundle ] && mkdir -p ~/.vim/bundle
 [ -d ~/.vim/bundle/neobundle.vim ] && echo "\n~/.vim/bundle/neobundle.vim is already exist." || git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim >/dev/null 2>&1 || echo -e "\033[31mgit clone failed\033[0m"
