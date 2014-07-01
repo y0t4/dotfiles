@@ -8,9 +8,10 @@ filetype off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+call neobundle#begin(expand('~/.vim/bundle/'))
 " originalrepos on github
+NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
   \     'windows' : 'echo "Sorry, cannot update vimproc binary file in Windows."',
@@ -33,9 +34,13 @@ NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
 
+call neobundle#end()
+
 filetype plugin indent on
 filetype indent on
 syntax on
+
+NeoBundleCheck
 
 " vimshell
 let g:vimshell_prompt=$USER."% "
