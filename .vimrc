@@ -127,6 +127,7 @@ set hidden
 " new window
 set nosplitbelow
 set splitright
+set diffopt=vertical
 
 " indent
 set smartindent
