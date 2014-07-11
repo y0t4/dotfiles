@@ -74,8 +74,6 @@ augroup MyColorScheme
   autocmd ColorScheme * highlight Comment ctermfg=50
   autocmd ColorScheme * highlight TabLineFill ctermfg=0
   autocmd ColorScheme * highlight TabLine ctermfg=7
-  autocmd ColorScheme * highlight TabLineSel ctermbg=7
-  autocmd ColorScheme * highlight TabLineSel ctermfg=0
 augroup END
 colorscheme molokai
 let g:molokai_original=1
