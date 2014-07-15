@@ -71,7 +71,7 @@ endif
 augroup MyColorScheme
   autocmd!
   autocmd ColorScheme * highlight Visual ctermbg=8
-  autocmd ColorScheme * highlight Comment ctermfg=50
+  autocmd ColorScheme * highlight Comment ctermfg=66
   autocmd ColorScheme * highlight TabLineFill ctermfg=0
   autocmd ColorScheme * highlight TabLine ctermfg=7
 augroup END
@@ -167,3 +167,10 @@ augroup END
 
 " ctags
 set tags=tags
+
+if has( "autocmd" )
+  augroup MyCursorStore
+    autocmd!
+    autocmd BufReadPost * if 0 < line("'\"") && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+  augroup END
+endif
