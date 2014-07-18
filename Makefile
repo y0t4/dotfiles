@@ -5,7 +5,7 @@ tmux:
 
 vim: gitmodule
 	ln -s -f ${PWD}/.vimrc ${HOME}/.vimrc
-	ln -s -f ${PWD}/.vim ${HOME}/
+	ln -s -f ${PWD}/.vim ${HOME}
 
 gitmodule:
 	git submodule init
