@@ -1,9 +1,12 @@
 dotfiles
 ========
 
-### How to setup vim
+### How to setup
 
-run this command
-```
-$ eval "$(curl https://raw.githubusercontent.com/y0t4/dotfiles/master/setup_vim.sh 2>/dev/null)"
-```
+cloneしたあと`make`してね
+
+### これ入れとくといいよ
+* ctags
+  * vimのプラグインで使ってます
+  * `exuberant ctags`っていうのが必要
+    * Mac OS Xな人は`$ brew install ctags`とかで入ります
