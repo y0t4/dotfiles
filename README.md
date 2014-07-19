@@ -3,10 +3,8 @@ dotfiles
 
 ### How to setup
 
-cloneしたあと`make`してね
+1 cloneしたあと`make`
+1 `$ brew bundle`
 
-### これ入れとくといいよ
-* ctags
-  * vimのプラグインで使ってます
-  * `exuberant ctags`っていうのが必要
-    * Mac OS Xな人は`$ brew install ctags`とかで入ります
+* 注意: 設定上書きをするので必要な場合はバックアップを取ってから実行してください
+
