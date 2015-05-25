@@ -35,6 +35,7 @@ NeoBundleLazy 'kannokanno/previm',       {'autoload' : {'filetypes' : ['markdown
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'derekwyatt/vim-scala'
 
 call neobundle#end()
 
