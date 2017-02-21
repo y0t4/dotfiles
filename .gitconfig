@@ -1,0 +1,10 @@
+[core]
+	editor = /usr/bin/vim
+[user]
+	name =
+	email =
+[push]
+  default = simple
+[alias]
+  diffr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+  lga = log --find-copies --graph --abbrev --relative-date --topo-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --all

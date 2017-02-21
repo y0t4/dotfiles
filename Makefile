@@ -1,4 +1,4 @@
-all: tmux vim zsh
+all: tmux vim zsh gitconfig
 
 tmux:
 	ln -s -f ${PWD}/.tmux.conf ${HOME}/.tmux.conf
@@ -13,3 +13,6 @@ zsh:
 gitmodule:
 	git submodule init
 	git submodule update
+
+gitconfig:
+	ln -s -f ${PWD}/.gitconfig ${HOME}/.gitconfig
