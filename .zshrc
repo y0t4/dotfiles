@@ -2,6 +2,10 @@
 autoload -U compinit
 compinit
 bindkey "[Z" reverse-menu-complete
+bindkey "ƒ" forward-word
+bindkey "∫" backward-word
+bindkey "≥" yank-last-arg
+bindkey "∂" kill-word 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # lang
